@@ -22,6 +22,9 @@
         <input type="submit" name="name" value="Cancel">
       </form>
     </div>
+    <div ng-show="NQ.errors.length > 0">
+      <p ng-bind="NQ.errors[0]"></p>
+    </div>
   </form>
 
 

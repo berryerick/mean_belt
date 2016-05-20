@@ -12,6 +12,12 @@ mean_belt.config(function($routeProvider){
   .when('/new_question',{
     templateUrl: "/partials/new_question.html"
   })
+  .when('/question/:id',{
+    templateUrl: "/partials/question.html"
+  })
+  .when('/question/:id/new_answer',{
+    templateUrl: "/partials/answer.html"
+  })
   .otherwise({
     redirectTo: '/login'
   })

@@ -10,7 +10,7 @@
 
   <a href="#/new_question">Add a new question</a>
   <div class="search">
-    Search: <input type="text" ng-model="DCsearch_filter">
+    Search: <input type="text" ng-model="DC.search_filter">
   </div>
   <table>
     <thead>
@@ -19,9 +19,9 @@
       <th>Action</th>
     </thead>
     <tbody>
-      <tr ng-repeat="question in DC.questions">
+      <tr ng-repeat="question in DC.questions | filter: DC.search_filter">
         <td ng-bind="question.title"></td>
-        <td ng-bind="question.answer.length"></td>
+        <td ng-bind="question.answers.length"></td>
         <td><a href="#/question/{{question._id}}">Show</a> <a href="#/question/{{question._id}}/new_answer">Answer</a></td>
       </tr>
     </tbody>

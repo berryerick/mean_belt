@@ -1,0 +1,30 @@
+<div ng-controller='answerController as AC'>
+  <nav>
+    <div class="nav_left">
+      <a href="#/">Home</a> | <a href="#/question/{{AC.question._id}}">Back to Question</a>
+    </div>
+    <div class="nav_links">
+      <a href="#/login">Logout</a>
+    </div>
+  </nav>
+  {{AC}}
+  <h1 ng-bind="AC.question.title"></h1>
+  <h3 ng-bind="AC.question.description"></h3>
+  <form class="new_question">
+    <div class="field">
+      answer: <textarea name="answer" ng-model="AC.answer.title" rows="8" cols="40"></textarea>
+    </div>
+    <div class="field">
+      Description: <textarea name="answer" ng-model="AC.answer.description" rows="8" cols="40"></textarea>
+    </div>
+    <div class="form-button">
+      <input type="button" ng-click="AC.create()" value="Submit">
+      <form action="#/" method="get">
+        <input type="submit" name="name" value="Cancel">
+      </form>
+    </div>
+  </form>
+
+
+
+</div>

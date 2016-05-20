@@ -26,8 +26,25 @@ module.exports = {
       }
     })
   },
-  update: function(req, res){},
-  show: function(req, res){},
+  // update: function(req, res){
+  //   console.log("in question update", req.body);
+  //
+  // },
+  show: function(req, res){
+    console.log("in questions show:", req.params.id);
+    // Question.findOne({_id: req.params.id}, function(err, question){
+    //   if(err) console.log(err)
+    //   else {
+    //     console.log("Questions index data: ", question)
+    //     res.json(question)
+    //   }
+    // })
+    Question.findOne({_id: req.params.id}).populate("answers").exec(function(err, question){
+      console.log("here is the question",question);
+      res.json(question)
+    })
+
+  },
   destroy: function(req, res){},
 
 }

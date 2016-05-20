@@ -32,10 +32,15 @@ module.exports = function(app) {
   //   console.log('in post /questions/:id/newanswer route with: ', req.body, req.params.id);
   //   questions.update(req, res)
   // })
+  app.post('/like/:id', function(req, res){
+    console.log('in post /questions route with: ', req.params.id);
+    answers.like(req, res)
+  })
   app.post('/answers', function(req, res){
     console.log('in post /questions route with: ', req.body);
     answers.create(req, res)
   })
+
   app.get('questions/:id/answers', function(req, res){
     console.log('in post /questions route with: ', req.body);
     answers.show(req, res)

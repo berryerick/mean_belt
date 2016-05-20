@@ -7,7 +7,7 @@
       <a href="#/login">Logout</a>
     </div>
   </nav>
-  {{QC}}
+  <!-- {{QC}} -->
   <h1 ng-bind="QC.question.title"> </h1>
   <h3 ng-bind="QC.question.description"></h3>
   <div class="answers">
@@ -16,7 +16,7 @@
         <h4 ng-bind="answer.title"></h4>
         <p ng-bind="answer.description"></p>
         <p>likes: <span ng-bind="answer.likes"></span></p>
-          <button type="button" ng-click="QC.like(answer._id)" name="button">Like</button>
+        <button type="button" ng-click="QC.like(answer._id)" name="button">Like</button>
       </li>
     </ul>
 

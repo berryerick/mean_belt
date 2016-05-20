@@ -103,13 +103,13 @@ mean_belt.factory('answerFactory', function($http, $location, $routeParams){
       }
     })
   }
-  // factory.show = function(info, callback){
-  //   console.log("in answerfactory.show method", info);
-  //   $http.get('/questions/'+info+'/answers').success(function(output){
-  //     console.log("answers show output", output);
-  //     callback(output)
-  //   })
-  // }
+  factory.update = function(info, callback){
+    console.log("in answerfactory update method", info);
+    $http.post('/like/'+info).success(function(output){
+      console.log("answers show output", output);
+      callback(output)
+    })
+  }
 
   return factory
 })

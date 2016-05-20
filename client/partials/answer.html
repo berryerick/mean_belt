@@ -7,7 +7,7 @@
       <a href="#/login">Logout</a>
     </div>
   </nav>
-  {{AC}}
+  <!-- {{AC}} -->
   <h1 ng-bind="AC.question.title"></h1>
   <h3 ng-bind="AC.question.description"></h3>
   <form class="new_question">
@@ -22,6 +22,9 @@
       <form action="#/" method="get">
         <input type="submit" name="name" value="Cancel">
       </form>
+    </div>
+    <div ng-show="AC.errors.length > 0">
+      <p ng-bind="AC.errors[0]"></p>
     </div>
   </form>
 

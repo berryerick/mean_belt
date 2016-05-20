@@ -74,16 +74,17 @@ mean_belt.controller('questionController', function(userFactory, questionFactory
   //   that.answers = answers
   // })
   this.like = function(answer){
-    console.log(answer);
+    console.log("in like function");
+    // console.log(answer);
     answerFactory.update(answer, function(){
 
     })
     for (i in this.question.answers){
       if (this.question.answers[i]._id == answer){
-        console.log("liked");
         this.question.answers[i].likes ++
       }
     }
+    // this.question.answers[this.question.answers.indexOf("_id" == answer)].likes ++
   }
 
 })

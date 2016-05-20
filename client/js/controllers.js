@@ -80,10 +80,10 @@ mean_belt.controller('questionController', function(userFactory, questionFactory
     })
     for (i in this.question.answers){
       if (this.question.answers[i]._id == answer){
+        console.log("liked");
         this.question.answers[i].likes ++
       }
     }
-    // this.question.answers[this.question.answers.indexOf("_id" == answer)].likes ++
   }
 
 })

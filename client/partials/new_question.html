@@ -1,0 +1,29 @@
+<div ng-controller='newQuestionController as NQ'>
+  <nav>
+    <div class="nav_left">
+      <a href="#/">Home</a>
+    </div>
+    <div class="nav_links">
+      <a href="#/login">Logout</a>
+    </div>
+  </nav>
+  {{NQ}}
+  <h1>New Question</h1>
+  <form class="new_question">
+    <div class="field">
+      question: <textarea name="question" ng-model="NQ.question.title" rows="8" cols="40"></textarea>
+    </div>
+    <div class="field">
+      Description: <textarea name="question" ng-model="NQ.question.description" rows="8" cols="40"></textarea>
+    </div>
+    <div class="form-button">
+      <input type="button" ng-click="NQ.create()" value="Submit">
+      <form action="#/" method="get">
+        <input type="submit" name="name" value="Cancel">
+      </form>
+    </div>
+  </form>
+
+
+
+</div>
